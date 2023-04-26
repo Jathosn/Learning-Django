@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+	<h1>This is our body tag</h1>
+
+	{% for account in accounts %}
+		<p>{{account}}</p>
+	{% endfor %}
+</div>
+
+{% endblock content %}
