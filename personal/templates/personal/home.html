@@ -2,12 +2,11 @@
 
 {% block content %}
 
-<div>
-	<h1>This is our body tag</h1>
+<h3>Registered users: </h3>
 
-	{% for account in accounts %}
-		<p>{{account}}</p>
-	{% endfor %}
-</div>
+{% for account in accounts %}
+	<p>{{account}}</p>
+{% endfor %}
+
 
 {% endblock content %}
