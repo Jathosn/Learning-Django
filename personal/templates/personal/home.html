@@ -6,11 +6,15 @@
 	<p class="fs-5 text-body-secondary">Is an application designed to make businesses in the restaurant industry better equipped to systematize their recipes to drive down cost. </p>
 	<p class="fs-5 text-body-secondary">Receipy comes with functionality that allows businesses to get informed when something has a huge change in cost, both high and low. The dashboard serves to visualize the most vital changes in your data, so you can be equipped to take the right actions.</p>
   </div>
-<h3>Registered users: </h3>
 
-{% for account in accounts %}
-	<p>{{account}}</p>
-{% endfor %}
+<div class="container">
+	<div class="d-flex flex-column">
+		<h4>Registered users: </h4>
+		{% for account in accounts %}
+			<p>{{account}}</p>
+		{% endfor %}
+	</div>
+</div>
 
 
 {% endblock content %}
