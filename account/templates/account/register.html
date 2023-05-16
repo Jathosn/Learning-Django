@@ -2,23 +2,70 @@
 
 {% block content %}
 
-<h2>Register</h2>
-<form method="post"> {% csrf_token %}
-    {% for field in registration_form %}
-        <p>
-            {{field.label_tag}}
-            {{field}}
-
-            {% if field.help_text %}
-                <small>{{field.help_text}}</small>
-            {% endif %}
-
+<style type="text/css">
+    .form-signin {
+      max-width: 330px;
+      padding: 15px;
+    }
+    .form-signin .form-floating:focus-within {
+      z-index: 2;
+    }
+    .form-signin input[type="email"] {
+      margin-bottom: 10px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .form-signin input[type="text"] {
+      margin-bottom: 10px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    
+    .form-signin input[type="password"] {
+      margin-bottom: 1px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    .h3 {
+        text-align: center;
+    }
+    
+    </style>
+    
+    <main class="form-signin w-100 m-auto"> 
+        <form method="post"> {% csrf_token %}  
+          <h1 class="h3 mb-3 font-weight-normal">Register here</h1>
+          <div class="form-floating">
+            <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" autofocus>
+            <label for="floatingInput">Email</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Username">
+            <label for="floatingPassword">Username</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" name="password1" class="form-control" id="inputPassword1" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" name="password2" class="form-control" id="inputPassword2" placeholder="Confirm password">
+            <label for="floatingPassword">Confirm</label>
+          </div>
+      
+          {% for field in registration_form %}
+          <p>
             {% for error in field.errors %}
                 <p style="color: red">{{error}}</p>
             {% endfor %}
-        </p>
-    {% endfor %}
-    <button type="submit">Register</button>
-</form>
-
+          </p>
+      {% endfor %}
+      {% if registration_form.non_field_errors %}
+        <div style="color: red;">
+            <p>{{registration_form.non_field_errors}}</p>
+        </div>
+      {% endif %}
+    
+          <button class="w-100 btn btn-lg btn-success" type="submit">Register</button>
+        </form>
+      </main>
 {% endblock content %}
