@@ -1,4 +1,4 @@
-To run this project locally you need to set up a MySQL server. Download the msot recent installer from https://dev.mysql.com/downloads/installer/ and install the developer package.
+To run this project locally you need to set up a MySQL server. Download the most recent installer from https://dev.mysql.com/downloads/installer/ and install the developer package.
 
 Run **MySQL Command Line Client** and log in with your credentials.
 
