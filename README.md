@@ -2,7 +2,7 @@ To run this project locally you need to set up a MySQL server. Download the msot
 
 Run **MySQL Command Line Client** and log in with your credentials.
 
-Run this query to create a database with the same name as is used in this project.
+Run this query to create a database with the same name as is used in this project and initialize it.
 ```cmd
 CREATE DATABASE receipy_testing;
 use receipy_testing;
