@@ -11,4 +11,4 @@ Given that everything went as intended, `cd` to the project folder and run `pyth
 
 Finally, to be up-to-date on the Python packages used in the project, run `pip freeze > requirements.txt` to write a text file with the requirements, then run `pip install -r requirements.txt` to install them.
 
-Start the project locally with `python manage.py runserver`.
+Start the project locally with `python manage.py runserver`
