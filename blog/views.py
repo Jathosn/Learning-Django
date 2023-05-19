@@ -62,7 +62,7 @@ def get_blog_queryset(query=None):
     for q in queries:
         posts = BlogPost.objects.filter(
             Q(title__icontains=q) |
-            Q(body__iconstains=q)
+            Q(body__icontains=q)
         ).distinct()
 
     for post in posts:
