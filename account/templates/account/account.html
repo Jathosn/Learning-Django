@@ -23,6 +23,14 @@
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
+    .h3{
+      text-align: center;
+    }
+    .blog-posts{
+      max-width: 500px;
+      width: 100%;
+      margin: auto;
+    }
     </style>
     
     <main class="form-signin w-100 m-auto"> 
@@ -60,6 +68,24 @@
     
     <div class="d-flex flex-column">
         <a class="m-auto" href="{% url 'password_change' %}">Change password</a>
+    </div>
+
+    <div class="container mt-4 p-4">
+      <div class="row">
+        <div class="blog-posts">
+          <h3 class="mb-3 font-weight-normal">Blog posts:</h3>
+          {% if blog_posts %}
+          <ul>
+            {% for post in blog_posts %}
+              <a href="#" style="text-decoration: none;"></a>
+                <li class="list-group-item">{{post}}</li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p>You have no blog posts. Create one <a href="{% url 'blog:create' %}"> here</a></p>
+          {% endif %}
+        </div>
+      </div>
     </div>
 
 {% endblock content %}
