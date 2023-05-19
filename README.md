@@ -13,3 +13,4 @@ Finally, to be up-to-date on the Python packages used in the project, run `pip f
   * **Pip installation: https://pip.pypa.io/en/stable/installation/**
 
 Start the project locally with `python manage.py runserver`
+  * Database not running? search for **services.msc**, locate the database by the name you gave it, and run it.
