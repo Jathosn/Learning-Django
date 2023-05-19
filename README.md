@@ -9,6 +9,7 @@ use receipy_testing;
 ```
 Given that everything went as intended, `cd` to the project folder and run `python manage.py migrate` to create the necessary database tables, and be synchronized with our project.
 
-Finally, to be up-to-date on the Python packages used in the project, run `pip freeze > requirements.txt` to write a text file with the requirements, then run `pip install -r requirements.txt` to install them.
+Finally, to be up-to-date on the Python packages used in the project, run `pip freeze > requirements.txt` to write a text file with the requirements, then run `pip install -r requirements.txt` to install
+  * **Pip installation: https://pip.pypa.io/en/stable/installation/**
 
 Start the project locally with `python manage.py runserver`
